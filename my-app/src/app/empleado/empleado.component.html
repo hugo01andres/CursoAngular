@@ -1,12 +1,11 @@
 <p><b>Nombre del empleado:</b> {{nombre}}</p>
 <p><b>Apellido del empleado:</b> {{apellido}}</p>
 <p><b>Edad del empleado:</b> {{edad}}</p>
-<p><b>Empresa del empleado:</b> {{empresa}}</p>
+<p><b>Empresa del empleado:</b> {{empresa.value}}</p>
 
-Introduce la empresa: <input type="text" [(ngModel)]="empresa">
+Introduce la empresa: <input placeholder="Google" type="text" #empresa (keyup)="0">
 
 <br>
 <br>
 
-<input type="button" value="dale" (click)="llamaEmpresa()">
 

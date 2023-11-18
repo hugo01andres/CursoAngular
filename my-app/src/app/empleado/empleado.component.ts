@@ -16,7 +16,8 @@ export class EmpleadoComponent implements OnInit {
     
    }
 
-  llamaEmpresa(){
+  llamaEmpresa(value: string){
+    this.empresa = value;
     
   }
 
