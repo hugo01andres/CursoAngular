@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col">
+    <h1>{{titulo}}</h1>
+    <br><br>
+    <form action="" class="form-group row">
+        <div class="form-group col-md-3">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="nombre" [(ngModel)]="cuadroNombre">
+        </div>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let empleado of empleados">
+      {{empleado.nombre}} - {{empleado.apellidos}} - {{empleado.cargo}} - {{empleado.salario}}
+      </div>
+    </div>
+  </div>
+
+</div>
