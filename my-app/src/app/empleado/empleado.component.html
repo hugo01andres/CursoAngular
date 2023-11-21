@@ -1,11 +1,14 @@
 <p><b>Nombre del empleado:</b> {{nombre}}</p>
 <p><b>Apellido del empleado:</b> {{apellido}}</p>
 <p><b>Edad del empleado:</b> {{edad}}</p>
-<p><b>Empresa del empleado:</b> {{empresa.value}}</p>
+<p><b>Empresa del empleado:</b> {{empresa}}</p>
 
-Introduce la empresa: <input placeholder="Google" type="text" #empresa (keyup)="0">
-
+<!-- Introduce la empresa: <input placeholder="Google" type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro"> -->
+Introduce la empresa: <input  type="text" [(ngModel)]="empresa">
 <br>
 <br>
+{{textoR}} <br>
+Registro: <input type="checkbox" id="registro" [checked]="usuRegistrado" (click)="setSeRegistra()">
+
 
 

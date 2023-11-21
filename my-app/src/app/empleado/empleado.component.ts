@@ -10,7 +10,21 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Juan";
   apellido = "Perez";
   edad = 25;
-  empresa: string = "Google";
+  empresa = "Google";
+
+  habilitacionCuadro = true;
+  usuRegistrado = false;
+  textoR = "No hay nadie registrado"
+
+  getRegistroUsuario(){
+    this.usuRegistrado = true;
+  }
+  setSeRegistra(){
+    this.textoR = "El usuario se acaba de registrar";
+  }
+  cambiarEmpresa(event: any){
+    this.empresa = event.target.value;
+  }
 
   constructor() {
     
@@ -20,6 +34,7 @@ export class EmpleadoComponent implements OnInit {
     this.empresa = value;
     
   }
+  
 
   ngOnInit(): void {
   }
