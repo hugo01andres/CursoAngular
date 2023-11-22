@@ -9,4 +9,9 @@ import { Empleado } from '../empleado.model';
 
 export class EmpleadoHijoCComponent {
   @Input() empleadoDeLista!: Empleado;
+
+  arrayCaracteristicas = [''];
+  addNewCaracteristicas(newItem: string) {
+    this.arrayCaracteristicas.push(newItem);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-caracteristicas-empleado-c',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './caracteristicas-empleado-c.component.css'
 })
 export class CaracteristicasEmpleadoCComponent {
+@Output() caracteristicasEmpleado = new EventEmitter<string>();
 
+addNewCaracteristicas(value: string) {
+    this.caracteristicasEmpleado.emit(value);
+  }
 }
